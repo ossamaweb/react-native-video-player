@@ -147,6 +147,7 @@ export default class VideoPlayer extends Component {
       this.props.onProgress(event);
     }
     if (this.player) {
+      // check if ref exist first
       this.setState({
         progress: event.currentTime / (this.props.duration || this.state.duration),
       }); 
